@@ -1,0 +1,17 @@
+export const FRUITS = [
+  "apple",
+  "orange",
+  "banana",
+  "grape",
+  "strawberry",
+  "kiwi",
+  "watermelon",
+  "pineapple",
+  "mango",
+  "pear",
+  "avocado",
+  "apricot",
+  "blueberry",
+  "blackberry",
+  "boysenberry",
+];
