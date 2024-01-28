@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             const el = document.createElement('div')
             el.innerHTML= item
             el.classList.add('dropdown-item')
+            el.setAttribute('data-key',item)
             suggFragment.appendChild(el)
         })
         suggestionBox.innerHTML="";
@@ -47,7 +48,18 @@ document.addEventListener('DOMContentLoaded', ()=>{
         }
         
     }
+
+    const handleClick = (event) => {
+        const { key } = event.target.dataset
+        if(key)
+        {
+            inputBox.value= key;
+            resetState()
+        }
+
+    }
     inputBox.addEventListener('input',debounce(handleInputChange,500))
+    suggestionBox.addEventListener('click', handleClick)
 })
 
 
