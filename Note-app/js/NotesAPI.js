@@ -1,4 +1,5 @@
 export default class NotesAPI {
+  
   static getAllNotes() {
     const notes = JSON.parse(localStorage.getItem("notesapp-notes") || "[]");
 
@@ -29,7 +30,7 @@ export default class NotesAPI {
 
   static deleteNotes(notes_id) {
     const notes = NotesAPI.getAllNotes();
-    const filteredNotes = notes.filter((note) => note.id !== notes_id);
+    const filteredNotes = notes.filter((note) => note.id != notes_id);
     localStorage.setItem("notesapp-notes", JSON.stringify(filteredNotes));
   }
 }
