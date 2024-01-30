@@ -1,0 +1,44 @@
+.container{
+    height:100vh;
+    width: 100wh;
+    padding:10px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+
+}
+.search-input{
+    width: 300px;
+    padding:10px;
+    border-radius:8px;
+    text-indent: 10px;
+    font-size:medium;
+}
+
+.movie-result-container{
+    padding:5px;
+    display: flex;
+    flex-direction: row;
+    margin-top:15px;
+}
+.movie-wrapper{
+    
+    display: flex;
+    flex-direction: column;
+    border : solid 2px #eee;
+    margin-left:10px;
+    margin-right:10px;
+}
+.movie-poster{
+    height: 300px;
+    width: 200px;
+    /* object-fit: cover; */
+    /* padding-bottom: 10px; */
+
+}
+.movie-title{
+    font-size: large;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+}
