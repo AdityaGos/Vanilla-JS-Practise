@@ -2,72 +2,72 @@
     {
       "year": "1995",
       "title": "Toy Story",
-      "poster": "https://i.imgur.com/9AIYSBh.jpg"
+      "poster": "toy story1"
     },
     {
       "year": "1998",
       "title": "A Bug's Life",
-      "poster": "https://i.imgur.com/xsFSk94.jpg"
+      "poster": "buglife"
     },
     {
       "year": "1999",
       "title": "Toy Story 2",
-      "poster": "https://i.imgur.com/nKewrZt.jpg"
+      "poster": "toy story2"
     },
     {
       "year": "2001",
       "title": "Monsters, Inc.",
-      "poster": "https://i.imgur.com/6Rp67Dk.jpg"
+      "poster": "monster"
     },
     {
       "year": "2003",
       "title": "Finding Nemo",
-      "poster": "https://i.imgur.com/ayuQvUw.jpg"
+      "poster": "finding nemo"
     },
     {
       "year": "2004",
       "title": "The Incredibles",
-      "poster": "https://i.imgur.com/UxOnhtb.jpg"
+      "poster": "The incredibles"
     },
     {
       "year": "2006",
       "title": "Cars",
-      "poster": "https://i.imgur.com/2CL3m78.jpg"
+      "poster": "cars"
     },
     {
       "year": "2007",
       "title": "Ratatouille",
-      "poster": "https://i.imgur.com/ipdIFTI.jpg"
+      "poster": "ratatouille"
     },
     {
       "year": "2008",
       "title": "WALL-E",
-      "poster": "https://i.imgur.com/DjaPeJZ.jpg"
+      "poster": "walle"
     },
     {
       "year": "2009",
       "title": "Up",
-      "poster": "https://i.imgur.com/EuSbGLy.jpg"
+      "poster": "yp"
     },
     {
       "year": "2010",
       "title": "Toy Story 3",
-      "poster": "https://i.imgur.com/EuVogeh.jpg"
+      "poster": "toy story3"
     },
     {
       "year": "2011",
       "title": "Cars 2",
-      "poster": "https://i.imgur.com/60ZSpMC.jpg"
+      "poster": "car2"
     },
     {
       "year": "2012",
       "title": "Brave",
-      "poster": "https://i.imgur.com/oyGczZj.jpg"
+      "poster": "brave"
     },
     {
       "year": "2013",
       "title": "Monsters University",
-      "poster": "https://i.imgur.com/VFcPd83.jpg"
+      "poster": "monster university"
     },
     {
       "year": "2015",
@@ -77,62 +77,62 @@
     {
       "year": "2015",
       "title": "The Good Dinosaur",
-      "poster": "https://i.imgur.com/2g9Sl6M.jpg"
+      "poster": "the good dinosaur"
     },
     {
       "year": "2016",
       "title": "Finding Dory",
-      "poster": "https://i.imgur.com/eKyDS4F.jpg"
+      "poster": "Finding dory"
     },
     {
       "year": "2017",
       "title": "Cars 3",
-      "poster": "https://i.imgur.com/RYK56To.jpg"
+      "poster": "car3"
     },
     {
       "year": "2017",
       "title": "Coco",
-      "poster": "https://i.imgur.com/PRZnsrF.jpg"
+      "poster": "coco"
     },
     {
       "year": "2018",
       "title": "Incredibles 2",
-      "poster": "https://i.imgur.com/d8sBlws.jpg"
+      "poster": "incredible2"
     },
     {
       "year": "2019",
       "title": "Toy Story 4",
-      "poster": "https://i.imgur.com/Q1WlKdd.jpg"
+      "poster": "toy story4"
     },
     {
       "year": "2020",
       "title": "Onward",
-      "poster": "https://i.imgur.com/CnWaCxv.jpg"
+      "poster": "onward"
     },
     {
       "year": "2020",
       "title": "Soul",
-      "poster": "https://i.imgur.com/yQYgH7Z.jpg"
+      "poster": "soul"
     },
     {
       "year": "2021",
       "title": "Luca",
-      "poster": "https://i.imgur.com/HCgntYC.jpg"
+      "poster": "luca"
     },
     {
       "year": "2022",
       "title": "Turning Red",
-      "poster": "https://i.imgur.com/zX2eTJP.jpg"
+      "poster": "turning red"
     },
     {
       "year": "2022",
       "title": "Lightyear",
-      "poster": "https://i.imgur.com/Zxo6X0k.jpg"
+      "poster": "lightyear"
     },
     {
       "year": "2023",
       "title": "Elemental",
-      "poster": "https://i.imgur.com/gyTzrM2.jpg"
+      "poster": "elemental"
     }
   ]
   module.exports = { movieData };
