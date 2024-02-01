@@ -18,16 +18,16 @@ document.addEventListener("DOMContentLoaded", () => {
          </div>
     `
   }
-  const debounce = (fnc, delay = 300) => {
+  const debounce = (fnc, delay = 500) => {
     let timer;
     return function (...args) {
       clearInterval(timer);
       timer = setTimeout(() => {
-        fnc(...args);
+        fnc.apply(this,args);
       }, delay);
     };
   };
-
+  let abortController;
   const handleInput = async (event) => {
     const keyword = event.target.value;
     const trimKeyword = keyword.trim();
@@ -35,12 +35,19 @@ document.addEventListener("DOMContentLoaded", () => {
      resetMovieList();
      return;
     }
+    if (abortController) {
+      abortController.abort();
+    }
+
+    // Create a new AbortController for the current request
+    abortController = new AbortController();
 
     try {
       const result = await fetch("http://localhost:3000/search", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ searchVal: trimKeyword }),
+        signal:abortController.signal
       });
       if (!result.ok) {
         throw new Error(`HTTP error! Status: ${result.status}`);

@@ -17,9 +17,8 @@ app.listen(PORT, () => {
   app.get('/', (req, res) => { res.json('connected'); });
 // API endpoint to search data
 app.post('/search', (req, res) => {
-  // const searchedMovieKeyword = req.body.searchVal;
+
   const searchedMovieKeyword = req.body.searchVal;
-  console.log(searchedMovieKeyword)
 
   // Perform a simple case-insensitive search
   const result = movieData.filter((movie) => {
@@ -28,7 +27,8 @@ app.post('/search', (req, res) => {
     return titleLower.includes(keywordLower);
   });
 
-  res.json({ result});
+  setTimeout(()=>{ res.json({ result})},1000)
+  //  res.json({ result})
 });
 
 
