@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" />
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    <div id="root">
+        <h1>Tic Tac Toe</h1>
+        <div class="tic-tac-toe">
+        </div>
+    </div>
+
+    <script>
+        const gridSize=3
+        let currentPlayer = 'X'
+        const boardRef = document.querySelector('.tic-tac-toe')
+        const createBoard = ()=>{
+            for(let i = 0; i< gridSize; i++)
+            {
+                const rowRef = document.createElement('div')
+                rowRef.className = 'row'
+
+                for(let j=0;j<gridSize;j++)
+                {
+                    const cellRef = document.createElement('div')
+                    cellRef.className = 'cell'
+                    cellRef.addEventListener('click',function(e){ 
+                        e.target.innerText = currentPlayer
+                        changePlayer()
+                     })
+                    rowRef.appendChild(cellRef)
+
+                }
+
+                document.querySelector('.tic-tac-toe').appendChild(rowRef)
+               
+            }
+        }
+
+        function changePlayer ()
+        {
+            currentPlayer= currentPlayer==='X'? 'O' :'X'
+        }
+        createBoard()
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+#root{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding:20px;
+}
+
+.tic-tac-toe{
+    display: flex;
+    flex-direction: column;
+}
+
+.tic-tac-toe .row{
+    display: flex;
+    flex-direction: row;
+}
+
+.tic-tac-toe .cell{
+    padding:10px;
+    height: 30px;
+    width: 30px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+}
