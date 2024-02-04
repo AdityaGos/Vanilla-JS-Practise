@@ -27,10 +27,7 @@
                 {
                     const cellRef = document.createElement('div')
                     cellRef.className = 'cell'
-                    cellRef.addEventListener('click',function(e){ 
-                        e.target.innerText = currentPlayer
-                        changePlayer()
-                     })
+                      
                     rowRef.appendChild(cellRef)
 
                 }
@@ -38,13 +35,32 @@
                 document.querySelector('.tic-tac-toe').appendChild(rowRef)
                
             }
-        }
+    }
 
         function changePlayer ()
         {
             currentPlayer= currentPlayer==='X'? 'O' :'X'
         }
+
+        function addListener()
+        {
+            const boardRef=document.querySelector('.tic-tac-toe')
+
+            boardRef.addEventListener('click', function(e){
+                if(e.target.nodeName==='DIV')
+                {
+                    if(e.target.classList.contains('cell'))
+                    {
+                        e.target.innerText = currentPlayer
+                        changePlayer()
+                     }
+                    }
+                
+                })
+
+        }
         createBoard()
+        addListener()
     </script>
 </body>
 </html>
