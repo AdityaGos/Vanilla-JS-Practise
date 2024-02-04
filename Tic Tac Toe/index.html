@@ -29,6 +29,8 @@
                     cellRef.className = 'cell'
                       
                     rowRef.appendChild(cellRef)
+                    cellRef.setAttribute('data-row', i)
+                    cellRef.setAttribute('data-cell', j)
 
                 }
 
@@ -47,9 +49,10 @@
             const boardRef=document.querySelector('.tic-tac-toe')
 
             boardRef.addEventListener('click', function(e){
-                if(e.target.nodeName==='DIV')
+                if(e.target.nodeName==='DIV' && e.target.classList.contains('cell'))
                 {
-                    if(e.target.classList.contains('cell'))
+                    const cellFilled = !!e.target.innerText
+                    if(!cellFilled)
                     {
                         e.target.innerText = currentPlayer
                         changePlayer()
