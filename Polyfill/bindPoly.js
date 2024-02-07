@@ -24,4 +24,5 @@ Function.prototype.myBind = function (...args)
 }
 
 let fncPrintName = printName.myBind(name1,'Ranchi',)
+// what ever we pass in bind function we be received in the return function (...args)
 fncPrintName('Jharkhand',' India')
