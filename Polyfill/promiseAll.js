@@ -14,6 +14,9 @@ const promise3 = 42;
 // Promise.all([promise1,promise2]).then(console.log).catch((err)=> console.log(err))
 
 // promise all is a static method 
+const isPromise = (variable) => {
+    return variable instanceof Promise;
+  };
 Promise.myAll = function (promiseArr)
 {
     console.log(promiseArr.length)
@@ -22,21 +25,30 @@ Promise.myAll = function (promiseArr)
     return new Promise((resolve, reject)=>{
         
         promiseArr.forEach((promiseValue,index)=>{
-            promiseValue.then((res)=>{
+
+            if(isPromise( promiseValue))
+            {
+                promiseValue.then((res)=>{
+                    promiseCounter++;
+                    // maintaining the sequence of the promise
+                    result[index] = res;
+                    if(promiseCounter === promiseArr.length)
+                    {
+                        resolve(result)
+                    }
+                })
+                 // rejecting if we get any error
+                .catch((err)=> { reject(err)})
+            }
+            else{
                 promiseCounter++;
-                // maintaining the sequence of the promise
-                result[index] = res;
-                if(promiseCounter === promiseArr.length)
-                {
-                    resolve(result)
-                }
-            })
-             // rejecting if we get any error
-            .catch((err)=> { reject(err)})
+                result[index] = promiseValue
+            }
+           
 
            
         })
     })
 }
 
-Promise.myAll([promise1,promise2]).then(console.log).catch((err)=> console.log(err))
+Promise.myAll([promise1,promise2,promise3]).then(console.log).catch((err)=> console.log(err))
