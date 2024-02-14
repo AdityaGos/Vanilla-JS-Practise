@@ -7,8 +7,10 @@ document.addEventListener('DOMContentLoaded',()=>{
         try {
             const result = await fetch("http://localhost:3000/search", {
               method: "GET",
-              headers: { "Content-Type": "application/json" ,
-              "user": user},
+              headers: { 
+              "Content-Type": "application/json" ,
+              "user": user
+            },
             });
             console.log(result)
             const userFromServer = await result.text()

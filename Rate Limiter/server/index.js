@@ -1,6 +1,7 @@
 // server.js
 const express = require('express');
-
+const RateLimiter =require( '../src/RateLimiter.js') 
+const rateLimiter = new RateLimiter()
 const app = express();
 const PORT = 3000;
 const cors = require('cors')
@@ -16,7 +17,11 @@ app.listen(PORT, () => {
 
   app.get('/search', (req, res) => { 
     const user = req.headers.user
-    res.status(200).send(user);
+    if(!rateLimiter.isAllowed(user))
+    {
+      res.status(429).send('Too Many Requests');
+      
+    } else { res.status(200).send(user);}
    });
    
    app.get('*', (req,res)=>{
