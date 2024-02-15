@@ -14,6 +14,20 @@
     const employeeListRef = document.querySelector('.employees__name--list')
     const employeeInfoRef = document.querySelector('.employees__single--info')
 
+    const createEmployee = document.querySelector('.createEmployee')
+    const addEmployeeModal = document.querySelector('.addEmployee')
+  
+
+    createEmployee.addEventListener('click', ()=>{
+        addEmployeeModal.style.display="flex"
+    })
+
+    addEmployeeModal.addEventListener('click',(e)=>{
+
+        if(e.target.className=='addEmployee'){
+            addEmployeeModal.style.display="none"
+        }
+    })
     //Add Employee
 
 

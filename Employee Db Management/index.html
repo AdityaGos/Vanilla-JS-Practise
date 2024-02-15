@@ -9,7 +9,7 @@
     <div id="root">
         <header class="header">
             <h1>Employee DataBase Management</h1>
-            <button>Add Employee</button>
+            <button class="createEmployee">Add Employee</button>
         </header>
         <div class="employees">
             <div class="employees__names">
@@ -25,6 +25,22 @@
                 </div>
             </div>
         </div>
+         <div class="addEmployee">
+        <form class="addEmployee_create">
+          Add a new Employee
+          <div>
+            <input type="text" name="firstName" placeholder="First Name" required/>
+            <input type="text" name="lastName" placeholder="Last Name" required/>
+          </div>
+          <input type="text" name="imageUrl" placeholder="Image URL (Optional)" />
+          <input type="email" name="email" placeholder="Email" required/>
+          <input type="number" name="contactNumber" placeholder="Contact" required/>
+          <input type="number" name="salary" placeholder="Salary" required/>
+          <input type="text" name="address" placeholder="Address" required/>
+          <input type="date" name="dob" placeholder="Date of Birth" class="addEmployee_create--dob" required/>
+          <input type="submit" class="addEmployee_create--submit" value="Submit">
+        </form>
+      </div>
     </div>
     <link rel="stylesheet" href="./src/style.css">
     <script src="./src/index.js" defer ></script>
