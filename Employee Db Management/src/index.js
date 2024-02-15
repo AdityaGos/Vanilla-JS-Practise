@@ -28,6 +28,7 @@
             renderEmployee()
 
             //renderSingleEmployee
+            renderSingleEmployee()
         }
         
     } )
@@ -49,6 +50,21 @@
             employeeListRef.append(employee)
 
         })
+    }
+
+    const renderSingleEmployee = ()=>{
+        employeeInfoRef.innerHTML=`
+        <img src = "${selectedEmployee.imageUrl}"/ >
+        <span class="employee__single--heading"> 
+            ${selectedEmployee.firstName} ${selectedEmployee.lastName} ${selectedEmployee.age}
+        </span>
+
+        <span>${selectedEmployee.address}</span>
+        <span>${selectedEmployee.email}</span>
+        <span>${selectedEmployee.contactNumber}</span>
+        <span>${selectedEmployee.dob}</span>
+        `
+        
     }
     renderEmployee()
 })()
