@@ -15,7 +15,12 @@ body{
     align-items: center;
 
 }
-.header>button{
+.button__container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.button__container>button{
     padding: 10px 15px;
     border-radius: 20px;
     border:none;
@@ -23,7 +28,7 @@ body{
     cursor: pointer;
 }
 
-.header>button:hover{
+.button__container>button:hover{
     background-color: var(--btn-hover);
 }
 
