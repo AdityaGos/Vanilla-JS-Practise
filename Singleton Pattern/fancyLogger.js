@@ -1,8 +1,14 @@
-export default class FancyLogger{
+class FancyLogger{
 
     constructor()
     {
-        this.logs = []
+        if(FancyLogger.instance ==null)
+        {
+            this.logs = []
+            console.log(this)
+            FancyLogger.instance = this
+        }
+        return FancyLogger.instance
     }
 
     log(message)
@@ -14,3 +20,12 @@ export default class FancyLogger{
         console.log(`${this.logs.length} Logs`)
     }
 }
+
+
+const logger = new FancyLogger()
+const logger1 = new FancyLogger()
+console.log(logger ===logger1)
+
+Object.freeze(logger)
+
+export default logger
