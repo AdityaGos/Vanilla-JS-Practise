@@ -30,8 +30,9 @@ function compareObj( obj1, obj2)
 
         }
 
-        return true
+       
     }
+    return true
 }
 
 console.log(compareObj(a,b))

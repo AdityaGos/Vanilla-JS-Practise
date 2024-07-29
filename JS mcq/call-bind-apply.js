@@ -4,7 +4,8 @@
 
 
 //1. What is call ? 
-const person = { name :"Aditya"}
+const person = { name :"Aditya2"}
+const person3 = { name :"Aditya2" ,anything:"Kalki"}
 
 function printName (age){
     return ` Hello ${this.name} is ${age}`
@@ -145,8 +146,29 @@ function checkPassword(ok,fail){
 let user = {
     name:"Aditya Goswami",
     login(res){ 
-        console.log(this.name + res ? " logged in successfully" : " failed to login")
-    }
+        console.log(this.name + (res ? "login success" : "fail"))
+    },
+    loginArrow:()=> { console.log(this.name)}
 }
-console.log(user.login)
-// checkPassword(user.login(true), user.login(false))
+// console.log(user.login(true))
+checkPassword(user.login.bind(user,true), user.login.bind(user,false))
+
+
+
+// 10 . Question 
+
+
+let user1 = {
+    name:"Aditya Goswami",
+    login(res){ 
+        console.log(this.name + (res ? "login success" : "fail") + "new object "+ this.anything)
+    },
+    // arrow function do not have their own this context.
+    loginArrow:()=> { console.log(this.name , this.anything)}
+}
+
+
+
+// this print the " new object" + anything because we associated the login method with person3 object
+// which has the variable anything in it , if we call the login with person we will get undefined
+user1.loginArrow.call(person3)
